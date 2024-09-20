@@ -51,7 +51,7 @@ const Dictionary = () => {
                     finalWord?.meanings?.map(word =>
                         <div className="lowerText mt-8">
                             <div className='flex justify-between items-center gap-4 mt-2'>
-                                <p className='text-[24px] font-semibold text-[#2d2d2d] w-[20%]'>
+                                <p className='text-[30px] font-semibold text-[#2d2d2d] w-[20%]'>
                                     {word?.partOfSpeech}
                                 </p>
 
@@ -71,22 +71,45 @@ const Dictionary = () => {
                                     )
                                 }
                             </ul>
+                            {word?.synonyms &&
+                                <div className='flex gap-2 mt-8'>
+                                    <p className='text-[16px] text-[#2d2d2d]'>
+                                        Synonyms:
+                                    </p>
 
-                            <div className='flex gap-2 mt-8'>
-                                <p className='text-[16px] text-[#2d2d2d]'>
-                                    Synonyms:
-                                </p>
-
-                                <div className='flex flex-wrap gap-2'>
-                                    {
-                                        word?.synonyms?.map((synms, index) => (
-                                            <p key={index} className='text-[16px] text-[#a445ed] font-bold hover:underline cursor-pointer'>
-                                                {synms},
-                                            </p>
-                                        ))
-                                    }
+                                    <div className='flex flex-wrap gap-2'>
+                                        {
+                                            word?.synonyms?.map((synms, index) => (
+                                                <p key={index} className='text-[16px] text-[#a445ed] font-bold hover:underline cursor-pointer'>
+                                                    {synms},
+                                                </p>
+                                            ))
+                                        }
+                                    </div>
                                 </div>
-                            </div>
+                            }
+
+                            {word?.antonyms &&
+                                <div className='flex gap-2 mt-4'>
+                                    <p className='text-[16px] text-[#2d2d2d]'>
+                                        Antonyms:
+                                    </p>
+
+                                    <div className='flex flex-wrap gap-2'>
+                                        {
+                                            word?.antonyms?.map((antms, index) => (
+                                                <p key={index} className='text-[16px] text-[#a445ed] font-bold hover:underline cursor-pointer'>
+                                                    {antms},
+                                                </p>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                            }
+
+                            <p className='text-[16px] text-[#757575] mt-16 italic pb-12'>
+                                <span className='mr-6 underline'>Source:</span> <a className='underline' href='https://api.dictionaryapi.dev/api/v2/entries/en/love' target='_blank'>https://api.dictionaryapi.dev/api/v2/entries/en/love</a>
+                            </p>
                         </div>
                     )
                 }
