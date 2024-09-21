@@ -27,12 +27,6 @@ const Navbar = () => {
                     </div>
 
                     <div className='flex items-center gap-4'>
-                        <div className='flex gap-4 items-center pr-4 border-r border-[#f4f4f4] cursor-pointer'>
-                            <p className='text-[16px] text-[#2d2d2d] dark:text-[#f4f4f4]'>
-                                Serif
-                            </p>
-                            <img src={downArrow} alt="arrow" />
-                        </div>
 
                         <button
                             className='themeSwitcher w-[40px] h-[20px] rounded-2xl bg-[#979797] dark:bg-[#A445ed] flex items-center px-[0.15rem] cursor-pointer hover:bg-[#A445ed] transition-colors delay-50'
