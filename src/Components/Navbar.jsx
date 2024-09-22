@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <div className='dark:bg-[#151515]'>
-            <div className='w-[55%] mx-auto'>
+            <div className='w-[90%] lg:w-[55%] mx-auto'>
                 <div className='navbar h-[20vh] flex justify-between items-center'>
                     <div>
                         <img src={logo} alt="logo" />

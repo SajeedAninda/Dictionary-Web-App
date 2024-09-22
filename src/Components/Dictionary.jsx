@@ -38,7 +38,7 @@ const Dictionary = () => {
 
     return (
         <div className='dark:bg-[#151515]'>
-            <div className='w-[55%] mx-auto'>
+            <div className='w-[90%] lg:w-[55%] mx-auto'>
                 <div className='searchBar relative'>
                     <input
                         className="w-full rounded-2xl py-5 bg-[#f4f4f4] dark:bg-[#2e2e2e] px-6"
@@ -131,8 +131,8 @@ const Dictionary = () => {
                         </div>
                     ))}
 
-                    <p className='text-[16px] text-[#757575] mt-16 italic pb-12'>
-                        <span className='mr-6 underline'>Source:</span> <a className='underline' href={`https://api.dictionaryapi.dev/api/v2/entries/en/${searchInput}`} target='_blank' rel="noreferrer">https://api.dictionaryapi.dev/api/v2/entries/en/{searchInput}</a>
+                    <p className='text-[10px] lg:text-[16px] text-[#757575] mt-16 italic pb-12 text-wrap'>
+                        <span className='mr-2 lg:mr-6 underline'>Source:</span> <a className='underline' href={`https://api.dictionaryapi.dev/api/v2/entries/en/${searchInput}`} target='_blank' rel="noreferrer">https://api.dictionaryapi.dev/api/v2/entries/en/{searchInput}</a>
                     </p>
                 </div>
             </div>
